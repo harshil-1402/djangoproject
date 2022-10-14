@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}contact us{% endblock title %}
+
+{% block body %}
+
+<style type="text/css">
+  
+</style>
+
+<div class="container-fluid px-0 mb-3">
+  <img src="https://source.unsplash.com/1200x400/?phone,contact" class="d-block w-100 mx-0" alt="...">
+</div>
+<div class="container">
+  <h3 class="text-center my-4">Contact Us</h3>
+    <form method="post" action="contact">
+      {% csrf_token %}
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@gamil.com">
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Harshil">
+        </div>
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="0123456789">
+        </div>
+        <!--<div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <!--<div class="form-group">
+          <label for="exampleFormControlSelect2">Example multiple select</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>-->
+        <div class="form-group">
+          <label for="dsc">Space for extra text</label>
+          <textarea class="form-control" id="dsc" rows="3" name="dsc"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary my-3" name="submit">Submit</button>
+      </form>
+</div>
+{% endblock body %}
